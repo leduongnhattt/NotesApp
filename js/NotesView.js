@@ -35,7 +35,7 @@ export default class NotesView {
         this.onNoteEdit(updatedTitle, updatedBody);
       });
     });
-
+    this.updateNotePreviewVisibility(true);
     // console.log(this._createListItemHTML(300, "Hey", "Yeah", new Date()));
   }
 
