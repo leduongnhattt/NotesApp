@@ -86,7 +86,7 @@ updateNoteList(notes) {
 
     noteListItems.forEach(noteListItem => {
         noteListItem.addEventListener("click", () => {
-            this.onNoteSelect(noteListItem.dataset.noteId);
+           this.onNoteSelect(noteListItem.dataset.noteId);
         });
 
         noteListItem.addEventListener("dblclick", () => {
@@ -104,10 +104,11 @@ updateNoteList(notes) {
         this.root.querySelector('.notes_body').value = note.content;
 
         this.root.querySelectorAll('.notes_list-item').forEach(noteListItem => {
-            noteListItem.classList.remove('.notes_list-item-selected');
+            noteListItem.classList.remove('notes_list-item-selected');
         });
 
-        this.root.querySelector(`.notes_list-item[data-note-id="${note.id}"]`).classList.add(".notes_list-item-selected");
+
+        this.root.querySelector(`.notes_list-item[data-note-id="${note.id}"]`).classList.add("notes_list-item-selected");
     }
 
     updateNotePreviewVisibility(visible) {

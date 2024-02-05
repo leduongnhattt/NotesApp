@@ -13,6 +13,7 @@ export default class App {
 
     _refreshNote() {
         const notes = NotesAPI.getAllNotes();
+       // console.log(notes);
         this._setNotes(notes);
 
         if(notes.length > 0) {
